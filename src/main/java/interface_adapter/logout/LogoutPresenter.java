@@ -29,6 +29,7 @@ public class LogoutPresenter implements LogoutOutputBoundary {
         // 1) Clear the LoggedIn state's username and notify listeners.
         var loggedInState = loggedInViewModel.getState();
         loggedInState.setUsername("");
+        loggedInState.setPassword("");
         loggedInViewModel.firePropertyChange();
 
         LoginState loginState = loginViewModel.getState();
